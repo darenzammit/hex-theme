@@ -1,0 +1,49 @@
+{
+    "name": "gulp-boilerplate",
+    "version": "4.2.3",
+    "description": "My Gulp.js boilerplate for creating new web projects",
+    "main": "./dist/js/myplugin.min.js",
+    "author": {
+        "name": "Chris Ferdinandi",
+        "url": "http://gomakethings.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/cferdinandi/Plugin"
+    },
+    "devDependencies": {
+        "browser-sync": "latest",
+        "del": "latest",
+        "gulp": "latest",
+        "gulp-autoprefixer": "latest",
+        "gulp-concat": "latest",
+        "gulp-cssnano": "latest",
+        "gulp-flatten": "latest",
+        "gulp-if": "^2.0.2",
+        "gulp-jshint": "^1.11.1",
+        "gulp-notify": "^3.0.0",
+        "gulp-plumber": "latest",
+        "gulp-postcss": "latest",
+        "gulp-rename": "latest",
+        "gulp-sass": "^3.1.0",
+        "gulp-svgmin": "latest",
+        "gulp-svgstore": "latest",
+        "gulp-tap": "latest",
+        "gulp-uglify": "latest",
+        "gulp-util": "^3.0.8",
+        "gulp-watch": "latest",
+        "jshint-stylish": "^2.0.1",
+        "lazypipe": "latest",
+        "minimist": "^1.2.0",
+        "node-fs": "latest"
+    },
+    "dependencies": {
+        "bootstrap": "4.0.0-alpha.6",
+        "jquery": "1.12.4 - 3",
+        "magnific-popup": "latest",
+        "map-icons": "^3.0.3",
+        "pikaday": "^1.6.0",
+        "swiper": "latest"
+    }
+}

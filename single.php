@@ -2,28 +2,27 @@
 /**
  * The template for displaying all single posts
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
  * @package hex
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  */
 
 namespace Hex;
 
-
-get_header(); ?>
+get_header();?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		while ( have_posts() ) : the_post();
-			
-			do_action('storefront_single_post_before' );
+		while (have_posts()): the_post();
 
-			get_template_part( 'components/post/content', 'single' );
+			do_action('hex_single_' . get_post_type() . '_before');
 
-			do_action('storefront_single_post_after');
-		
+			get_template_part('components/post/content', 'single');
+
+			do_action('hex_single_' . get_post_type() . '_after');
+
 		endwhile;
 		?>
 
@@ -31,5 +30,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-do_action( 'hex_sidebar' );
 get_footer();

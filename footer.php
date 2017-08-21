@@ -10,6 +10,7 @@
 namespace Hex;
 
 ?>		
+			<?php do_action( 'hex_content_bottom' ); ?>
 		</div><!-- #content -->
 		<?php do_action('hex_after_content' ); ?>
 

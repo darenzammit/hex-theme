@@ -25,6 +25,7 @@ define('HEX_CHILD_URL', get_stylesheet_directory_uri());
  */
 require_once __DIR__ . '/inc/setup.php';
 require_once __DIR__ . '/inc/helpers.php';
+require_once __DIR__ . '/inc/template-hooks.php';
 require_once __DIR__ . '/inc/shortcodes.php';
 require_once __DIR__ . '/inc/filters.php';
 require_once __DIR__ . '/inc/search.php';

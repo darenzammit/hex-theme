@@ -18,16 +18,12 @@ namespace Hex;
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <?php wp_head() ?>
 </head>
-<body>
+
+<body <?php \body_class(); ?>>
 	
 	<?php do_action( 'hex_before_site' ); ?>
-	<div id="page" class="site">
 
-		<!--[if IE]>
-	      <div id="outdated-browser-alert">
-	        <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'hex');?>
-	      </div>
-	    <![endif]-->
+	<div id="page" class="site">
 
 	    <?php do_action( 'hex_before_header' ); ?>
 		<header id="masthead" class="site-header" role="banner">

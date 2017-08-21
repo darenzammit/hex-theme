@@ -1,0 +1,13 @@
+body.sidebar-primary {
+    #primary.content-area {
+        @extend .col-md-8;
+    }
+    #secondary.widget-area {
+        @extend .col-md-4;
+    }
+}
+
+.wrapper{
+	@include make-container();
+    @include make-container-max-widths();
+}

@@ -19,6 +19,11 @@ function body_class(array $classes) {
 		}
 	}
 
+	//add sidebar
+	if (display_sidebar()) {
+		$classes[] = 'sidebar-primary';
+	}
+
 	return $classes;
 }
 

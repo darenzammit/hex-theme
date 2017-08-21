@@ -34,5 +34,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-do_action( 'hex_sidebar' );
 get_footer();

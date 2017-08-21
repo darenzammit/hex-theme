@@ -12,20 +12,20 @@ function enqueue_scripts() {
 		# code...
 	}
 	if (file_exists(HEX_PARENT_DIR . '/dist/css/admin.css')) {
-		wp_enqueue_style('hex-admin', HEX_PARENT_DIR . '/dist/css/admin.css', false);
+		wp_enqueue_style('hex-admin', HEX_PARENT_URL . '/dist/css/admin.css', false);
 	}
 
 	if (file_exists(HEX_PARENT_DIR . '/dist/css/admin.js')) {
-		wp_enqueue_script('hex-admin', HEX_PARENT_DIR . '/dist/js/admin.js', false);
+		wp_enqueue_script('hex-admin', HEX_PARENT_URL . '/dist/js/admin.js', false);
 	}
 
 	if (is_child_theme()) {
 		if (file_exists(HEX_CHILD_DIR . '/dist/css/admin.css')) {
-			wp_enqueue_style('hex-child-admin', HEX_CHILD_DIR . '/dist/css/admin.css', false);
+			wp_enqueue_style('hex-child-admin', HEX_CHILD_URL . '/dist/css/admin.css', false);
 		}
 
 		if (file_exists(HEX_CHILD_DIR . '/dist/css/admin.js')) {
-			wp_enqueue_script('hex-child-admin', HEX_CHILD_DIR . '/dist/js/admin.js', false);
+			wp_enqueue_script('hex-child-admin', HEX_CHILD_URL . '/dist/js/admin.js', false);
 		}
 	}
 

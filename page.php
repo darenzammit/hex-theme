@@ -23,12 +23,11 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 			
+			do_action('hex_single_page_before');
+
 			get_template_part( 'components/page/content');
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			do_action('hex_single_page_after');
 		
 		endwhile;
 		?>
@@ -37,5 +36,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-do_action( 'hex_sidebar' );
 get_footer();

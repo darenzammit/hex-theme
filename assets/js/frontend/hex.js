@@ -17,7 +17,6 @@ var app = (function($) {
         },
 
         base = function() {
-            $('main.main').fitVids();
 
             $('a[href="#"]').on('click', function(event) {
                 event.preventDefault();
@@ -91,9 +90,6 @@ var app = (function($) {
         init: function() {
             base();
             panels();
-            modal.init();
-            swipers.init();
-            wooCommerce.init();
         }
     };
 

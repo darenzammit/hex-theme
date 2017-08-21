@@ -6,16 +6,15 @@
             "input":
             {
                 "hex": [
-                    "node_modules/swiper/dist/js/swiper.min.js",
                     "assets/js/frontend/modules/**/*.js",
                     "assets/js/frontend/hex.js"
                 ],
                 "customizer": [
-                    "assets/js/customizer/**/*.js",
+                    "assets/js/customizer/modules/**/*.js",
                     "assets/js/customizer.js"
                 ],
                 "admin": [
-                    "assets/js/admin/**/*.js",
+                    "assets/js/admin/modules/**/*.js",
                     "assets/js/admin.js"
                 ]
             },

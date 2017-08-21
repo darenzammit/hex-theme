@@ -7,19 +7,19 @@
             {
                 "hex": [
                     "node_modules/swiper/dist/js/swiper.min.js",
-                    "assets/js/frontend/modules/**/*",
+                    "assets/js/frontend/modules/**/*.js",
                     "assets/js/frontend/hex.js"
                 ],
                 "customizer": [
-                    "assets/js/customizer/**/*",
+                    "assets/js/customizer/**/*.js",
                     "assets/js/customizer.js"
                 ],
                 "admin": [
-                    "assets/js/admin/**/*",
+                    "assets/js/admin/**/*.js",
                     "assets/js/admin.js"
                 ]
             },
-            "lint": "assets/js/**/*",
+            "lint": "assets/js/**/*.js",
             "output": "dist/js/"
         },
         "styles":
@@ -29,7 +29,7 @@
         },
         "svgs":
         {
-            "input": "assets/svg/**/*",
+            "input": "assets/svg/**/*.svg",
             "output": "dist/svg/"
         },
         "images":

@@ -8,21 +8,24 @@ add_action('admin_init', __NAMESPACE__ . '\\editor_mods');
 
 function enqueue_scripts() {
 
-	if (file_exists(HEX_PARENT_DIR . '/' . 'dist/css/admin.css')) {
-		wp_enqueue_style('hex-admin', HEX_PARENT_DIR . '/' . 'dist/css/admin.css', false);
+	if (apply_filters(' $tag, $value', true)) {
+		# code...
+	}
+	if (file_exists(HEX_PARENT_DIR . '/dist/css/admin.css')) {
+		wp_enqueue_style('hex-admin', HEX_PARENT_DIR . '/dist/css/admin.css', false);
 	}
 
-	if (file_exists(HEX_PARENT_DIR . '/' . 'dist/css/admin.js')) {
-		wp_enqueue_script('hex-admin', HEX_PARENT_DIR . '/' . 'dist/js/admin.js', false);
+	if (file_exists(HEX_PARENT_DIR . '/dist/css/admin.js')) {
+		wp_enqueue_script('hex-admin', HEX_PARENT_DIR . '/dist/js/admin.js', false);
 	}
 
 	if (is_child_theme()) {
-		if (file_exists(HEX_CHILD_DIR . '/' . 'dist/css/admin.css')) {
-			wp_enqueue_style('hex-child-admin', HEX_CHILD_DIR . '/' . 'dist/css/admin.css', false);
+		if (file_exists(HEX_CHILD_DIR . '/dist/css/admin.css')) {
+			wp_enqueue_style('hex-child-admin', HEX_CHILD_DIR . '/dist/css/admin.css', false);
 		}
 
-		if (file_exists(HEX_CHILD_DIR . '/' . 'dist/css/admin.js')) {
-			wp_enqueue_script('hex-child-admin', HEX_CHILD_DIR . '/' . 'dist/js/admin.js', false);
+		if (file_exists(HEX_CHILD_DIR . '/dist/css/admin.js')) {
+			wp_enqueue_script('hex-child-admin', HEX_CHILD_DIR . '/dist/js/admin.js', false);
 		}
 	}
 

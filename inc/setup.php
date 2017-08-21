@@ -34,7 +34,7 @@ function enqueue_styles() {
 	 */
 
 	if (apply_filters('hex_load_css', true)) {
-		wp_enqueue_style('hex-css', HEX_PARENT_URL . 'dist/css/main.css', [], HEX_VERSION);
+		wp_enqueue_style('hex-css', HEX_PARENT_URL . '/dist/css/hex.css', [], HEX_VERSION);
 	}
 
 	/**
@@ -42,7 +42,7 @@ function enqueue_styles() {
 	 */
 
 	if (is_child_theme()) {
-		wp_enqueue_style('hex-child-css', HEX_CHILD_URL . 'dist/css/main.css', [], wp_get_theme()->Version);
+		wp_enqueue_style('hex-child-css', HEX_CHILD_URL . '/dist/css/main.css', [], wp_get_theme()->Version);
 	}
 
 }
@@ -55,7 +55,7 @@ function enqueue_scripts() {
 	 * Base Scripts
 	 */
 	if (apply_filters('hex_load_js', true)) {
-		wp_enqueue_script('hex-js', HEX_PARENT_URL . 'dist/js/main.js', [], HEX_VERSION, true);
+		wp_enqueue_script('hex-js', HEX_PARENT_URL . '/dist/js/hex.js', [], HEX_VERSION, true);
 	}
 
 	/**
@@ -63,7 +63,7 @@ function enqueue_scripts() {
 	 */
 
 	if (is_child_theme()) {
-		wp_enqueue_script('hex-child-js', HEX_CHILD_URL . 'dist/js/main.js', [], wp_get_theme()->Version, true);
+		wp_enqueue_script('hex-child-js', HEX_CHILD_URL . '/dist/js/main.js', [], wp_get_theme()->Version, true);
 	}
 
 	/**

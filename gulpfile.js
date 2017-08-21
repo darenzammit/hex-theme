@@ -188,15 +188,14 @@ gulp.task('default', [
 //watch files
 gulp.task('watch', function() {
     browserSync.init({
-        files: ['{src,templates,components}/**/*.php', '*.php'],
+        files: ['{inc,templates,components}/**/*.php', '*.php'],
         proxy: config.devUrl,
         snippetOptions: {
             whitelist: ['/wp-admin/admin-ajax.php'],
             blacklist: ['/wp-admin/**']
         }
     });
-    gulp.watch([config.scripts.input.main], ['scripts:main']);
-    gulp.watch([config.scripts.input.customizer], ['scripts:customizer']);
+    gulp.watch([config.scripts.lint], ['build:scripts']);
     gulp.watch([config.styles.input], ['build:styles']);
     gulp.watch([config.images.input], ['build:images']);
     gulp.watch([config.static.input], ['build:static']);

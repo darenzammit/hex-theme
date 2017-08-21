@@ -6,6 +6,10 @@
  *
  * @package hex
  */
+
+namespace Hex;
+
+
 ?><!DOCTYPE html>
 <html <?php language_attributes();?>>
 <head>

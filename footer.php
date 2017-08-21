@@ -6,10 +6,12 @@
  *
  * @package hex
  */
+
+namespace Hex;
+
 ?>		
 		</div><!-- #content -->
 		<?php do_action('hex_after_content' ); ?>
-		
 
 		<?php do_action('hex_before_footer' ); ?>
 		<footer id="colophon" class="site-footer" role="contentinfo">

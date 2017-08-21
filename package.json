@@ -1,17 +1,12 @@
 {
     "name": "gulp-boilerplate",
     "version": "4.2.3",
-    "description": "My Gulp.js boilerplate for creating new web projects",
-    "main": "./dist/js/myplugin.min.js",
+    "description": "Gulp.js boilerplate for web projects",
     "author": {
-        "name": "Chris Ferdinandi",
-        "url": "http://gomakethings.com"
+        "name": "Daren Zammit",
+        "url": "https://darenzammit.com"
     },
     "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/cferdinandi/Plugin"
-    },
     "devDependencies": {
         "browser-sync": "latest",
         "del": "latest",
@@ -40,10 +35,6 @@
     },
     "dependencies": {
         "bootstrap": "4.0.0-alpha.6",
-        "jquery": "1.12.4 - 3",
-        "magnific-popup": "latest",
-        "map-icons": "^3.0.3",
-        "pikaday": "^1.6.0",
-        "swiper": "latest"
+        "jquery": "1.12.4 - 3"
     }
 }

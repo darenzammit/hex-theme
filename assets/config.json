@@ -1,0 +1,46 @@
+    {
+        "input": "assets/**/*",
+        "output": "dist/",
+        "scripts":
+        {
+            "input":
+            {
+                "hex": [
+                    "node_modules/swiper/dist/js/swiper.min.js",
+                    "assets/js/frontend/modules/**/*",
+                    "assets/js/frontend/hex.js"
+                ],
+                "customizer": [
+                    "assets/js/customizer/**/*",
+                    "assets/js/customizer.js"
+                ],
+                "admin": [
+                    "assets/js/admin/**/*",
+                    "assets/js/admin.js"
+                ]
+            },
+            "lint": "assets/js/**/*",
+            "output": "dist/js/"
+        },
+        "styles":
+        {
+            "input": "assets/sass/**/*.{scss,sass}",
+            "output": "dist/css/"
+        },
+        "svgs":
+        {
+            "input": "assets/svg/**/*",
+            "output": "dist/svg/"
+        },
+        "images":
+        {
+            "input": "assets/img/**/*",
+            "output": "dist/img/"
+        },
+        "static":
+        {
+            "input": "assets/static/**/*",
+            "output": "dist/"
+        },
+        "devUrl": "http://hex.dev/"
+    }

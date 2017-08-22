@@ -31,4 +31,3 @@ require_once __DIR__ . '/inc/filters.php';
 require_once __DIR__ . '/inc/search.php';
 require_once __DIR__ . '/inc/admin.php';
 require_once __DIR__ . '/inc/customizer.php';
-

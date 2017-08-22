@@ -37,6 +37,10 @@ function default_thumbnail($html, $post_id, $post_thumbnail_id, $size, $attr) {
 		$images = array(
 			"/dist/img/default-{$size}.png",
 			"/dist/img/default.png",
+			"/dist/img/default-{$size}.jpg",
+			"/dist/img/default.jpg",
+			"/dist/img/default-{$size}.gif",
+			"/dist/img/default.gif",
 		);
 		foreach ($images as $image) {
 			if (is_file(HEX_CHILD_DIR . $image)) {
@@ -112,3 +116,9 @@ function social_menu_args($nav_menu_args, $nav_menu, $args) {
 	}
 	return $nav_menu_args;
 }
+
+/**
+ * Allow shortcodes in widgets
+ */
+
+add_filter('widget_text', 'do_shortcode');

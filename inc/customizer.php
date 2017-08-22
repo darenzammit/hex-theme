@@ -63,5 +63,12 @@ function site_settings($wp_customize) {
 }
 
 function enqueue_scripts() {
-	wp_enqueue_script('hex/customizer.js', Hex()->asset_path('js/customizer.js'), ['customize-preview'], null, true);
+	if (file_exists(HEX_PARENT_DIR . '/dist/js/customizer.js')) {
+		wp_enqueue_script('hex-customizer', HEX_PARENT_URL . '/dist/js/customizer.js', ['customize-preview'], null, true);
+	}
+	if (is_child_theme()) {
+		if (file_exists(HEX_CHILD_DIR . '/dist/js/customizer.js')) {
+			wp_enqueue_script('hex-child-customizer', HEX_CHILD_URL . '/dist/js/customizer.js', ['customize-preview'], null, true);
+		}
+	}
 }

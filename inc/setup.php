@@ -21,7 +21,7 @@ function enqueue_styles() {
 	));
 
 	if (!empty($google_fonts)) {
-		
+
 		$query_args = array(
 			'family' => implode('|', $google_fonts),
 			'subset' => urlencode('latin,latin-ext'),
@@ -170,7 +170,7 @@ function register_sidebars() {
 	$config = [
 		'before_widget' => '<section class="widget %1$s %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3>',
+		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	];
 
@@ -186,13 +186,14 @@ function register_sidebars() {
 
 	$sidebars = apply_filters('hex_sidebars', $sidebars);
 
-	foreach ($sidebars as $id => $name) {
-		register_sidebar([
-			'id'   => $id,
-			'name' => $name,
-		] + $config);
+	if (!empty($sidebars)) {
+		foreach ($sidebars as $id => $name) {
+			register_sidebar([
+				'id'   => $id,
+				'name' => $name,
+			] + $config);
+		}
 	}
-
 }
 
 /**
@@ -204,3 +205,5 @@ add_filter('acf/fields/google_map/api', function ($api) {
 	}
 	return $api;
 });
+
+add_filter('hex/hero_slider/load_frontend_style', '__return_false' );

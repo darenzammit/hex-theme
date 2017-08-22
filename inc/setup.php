@@ -16,18 +16,21 @@ function enqueue_styles() {
 	 * Google Fonts
 	 */
 
-	$google_fonts = apply_filters('storefront_google_font_families', array(
+	$google_fonts = apply_filters('hex_google_font_families', array(
 		'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,600,700,900',
 	));
 
-	$query_args = array(
-		'family' => implode('|', $google_fonts),
-		'subset' => urlencode('latin,latin-ext'),
-	);
+	if (!empty($google_fonts)) {
+		
+		$query_args = array(
+			'family' => implode('|', $google_fonts),
+			'subset' => urlencode('latin,latin-ext'),
+		);
 
-	$fonts_url = add_query_arg($query_args, 'https://fonts.googleapis.com/css');
+		$fonts_url = add_query_arg($query_args, 'https://fonts.googleapis.com/css');
 
-	wp_enqueue_style('hex-fonts', $fonts_url, [], null);
+		wp_enqueue_style('hex-fonts', $fonts_url, [], null);
+	}
 
 	/**
 	 * Base Style

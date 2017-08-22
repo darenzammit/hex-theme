@@ -15,7 +15,7 @@ function enqueue_scripts() {
 		wp_enqueue_style('hex-admin', HEX_PARENT_URL . '/dist/css/admin.css', false);
 	}
 
-	if (file_exists(HEX_PARENT_DIR . '/dist/css/admin.js')) {
+	if (file_exists(HEX_PARENT_DIR . '/dist/js/admin.js')) {
 		wp_enqueue_script('hex-admin', HEX_PARENT_URL . '/dist/js/admin.js', false);
 	}
 
@@ -24,7 +24,7 @@ function enqueue_scripts() {
 			wp_enqueue_style('hex-child-admin', HEX_CHILD_URL . '/dist/css/admin.css', false);
 		}
 
-		if (file_exists(HEX_CHILD_DIR . '/dist/css/admin.js')) {
+		if (file_exists(HEX_CHILD_DIR . '/dist/js/admin.js')) {
 			wp_enqueue_script('hex-child-admin', HEX_CHILD_URL . '/dist/js/admin.js', false);
 		}
 	}

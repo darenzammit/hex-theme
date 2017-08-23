@@ -3,7 +3,7 @@
 namespace Hex\Admin;
 
 add_action('admin_enqueue_scripts', __NAMESPACE__ . '\\enqueue_scripts');
-add_action('admin_init', __NAMESPACE__ . '\\add_theme_options');
+add_action('acf/init', __NAMESPACE__ . '\\add_theme_options');
 add_action('admin_init', __NAMESPACE__ . '\\editor_mods');
 
 function enqueue_scripts() {

@@ -110,9 +110,10 @@ function wp_pagenavi_markup($html) {
  * Modify Widget Menu args
  */
 function social_menu_args($nav_menu_args, $nav_menu, $args) {
-	if ($args['id'] == 'sidebar-header' && $nav_menu->slug == 'social') {
-		$nav_menu_args['link_before'] = '<span class="screen-reader-text">';
+	if ($nav_menu->slug == 'social') {
+		$nav_menu_args['link_before'] = '<span class="sr-only">';
 		$nav_menu_args['link_after']  = '</span>';
+		$nav_menu_args['menu_class']  = 'menu menu-social';
 	}
 	return $nav_menu_args;
 }

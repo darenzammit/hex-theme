@@ -12,20 +12,20 @@ function enqueue_scripts() {
 		# code...
 	}
 	if (file_exists(HEX_PARENT_DIR . '/dist/css/admin.css')) {
-		wp_enqueue_style('hex-admin', HEX_PARENT_URL . '/dist/css/admin.css', false);
+		wp_enqueue_style('hex-admin', HEX_PARENT_URL . '/dist/css/admin.css', [], HEX_VERSION);
 	}
 
 	if (file_exists(HEX_PARENT_DIR . '/dist/js/admin.js')) {
-		wp_enqueue_script('hex-admin', HEX_PARENT_URL . '/dist/js/admin.js', false);
+		wp_enqueue_script('hex-admin', HEX_PARENT_URL . '/dist/js/admin.js', [], HEX_VERSION);
 	}
 
 	if (is_child_theme()) {
 		if (file_exists(HEX_CHILD_DIR . '/dist/css/admin.css')) {
-			wp_enqueue_style('hex-child-admin', HEX_CHILD_URL . '/dist/css/admin.css', false);
+			wp_enqueue_style('hex-child-admin', HEX_CHILD_URL . '/dist/css/admin.css', [], wp_get_theme()->Version);
 		}
 
 		if (file_exists(HEX_CHILD_DIR . '/dist/js/admin.js')) {
-			wp_enqueue_script('hex-child-admin', HEX_CHILD_URL . '/dist/js/admin.js', false);
+			wp_enqueue_script('hex-child-admin', HEX_CHILD_URL . '/dist/js/admin.js', [], wp_get_theme()->Version);
 		}
 	}
 

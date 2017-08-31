@@ -60,7 +60,7 @@ function enqueue_scripts() {
 	 */
 	if (apply_filters('hex_load_js', true)) {
 		wp_enqueue_script('hex-js', HEX_PARENT_URL . '/dist/js/hex.js', [], HEX_VERSION, true);
-		wp_localize_script('hex-js', 'hex', apply_filters('hex_js_params', ['ajax_url' => admin_url('admin-ajax.php')]));
+		wp_localize_script('hex-js', 'hex', apply_filters('hex_js_vars', ['ajax_url' => admin_url('admin-ajax.php')]));
 	}
 
 	/**

@@ -50,7 +50,6 @@ function enqueue_styles() {
 
 }
 
-
 /**
  * Theme Scripts
  */
@@ -61,6 +60,7 @@ function enqueue_scripts() {
 	 */
 	if (apply_filters('hex_load_js', true)) {
 		wp_enqueue_script('hex-js', HEX_PARENT_URL . '/dist/js/hex.js', [], HEX_VERSION, true);
+		wp_localize_script('hex-js', 'hex', apply_filters('hex_js_params', ['ajax_url' => admin_url('admin-ajax.php')]));
 	}
 
 	/**
@@ -208,4 +208,4 @@ add_filter('acf/fields/google_map/api', function ($api) {
 	return $api;
 });
 
-add_filter('hex/hero_slider/load_frontend_style', '__return_false' );
+add_filter('hex/hero_slider/load_frontend_style', '__return_false');
